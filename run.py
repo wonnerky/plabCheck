@@ -8,8 +8,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 __all__ = ['driver']
 
-startTime = ''
-groundName = '용산 아이파트몰 2구장 (맨체스터 유나이티드)'
 path = "./chromedriver"
 driver = webdriver.Chrome(path)
 driver.get("https://www.plabfootball.com/")
