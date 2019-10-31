@@ -17,7 +17,10 @@ while 1:
     driver.refresh()
 
     # match number 찾아서 적어 넣기
-    element0 = driver.find_elements(By.XPATH, "//a[@href='/match/4932/'] | //a[@href='/match/4933/']")
+    element0 = driver.find_elements(By.XPATH, "//a[@href='/match/4936/'] | //a[@href='/match/4938/']")
+    if not element0:
+        os.system('say "원하시는 게임이 없어요"')
+        break
     element = []
     i = 0
 
@@ -34,8 +37,10 @@ while 1:
 
     # class 로 만들어서 하면 더 좋을 듯
     if element[0].text != u"마감":
+        os.system('say "자리가 났어요"')
         break
     elif element[1].text != u"마감":
+        os.system('say "자리가 났어요"')
         break
     else:
         time.sleep(60)
@@ -43,6 +48,6 @@ while 1:
 
 
 
-os.system('say "plab ja ri not sur yo"')
+
 
 driver.quit()
