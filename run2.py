@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
-from selenium import webdriver
-
-path = "Webdriver 경로를 입력합니다"
+import winsound
+Freq = 2500 # Set Frequency To 2500 Hertz
+Dur = 1000 # Set Duration To 1000 ms == 1 second
+winsound.Beep(Freq,Dur)
