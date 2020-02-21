@@ -3,6 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import  By
 from slacker import Slacker
+import parameter
 import os
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -26,7 +27,7 @@ driver = webdriver.Chrome(path)
 driver.get("https://www.plabfootball.com/")
 avaMatch = False
 count = 0
-token = 'xoxp-841581891361-851718693238-849094701076-79e62daea2267bae5d9d0b4aa6f84a10'
+token = parameter.token
 slack = Slacker(token)
 # matches 객체에 원하는 매치 시간과 장소 상태 입
 lookingMatches = []
